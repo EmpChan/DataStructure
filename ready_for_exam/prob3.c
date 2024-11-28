@@ -1,17 +1,11 @@
-#include <malloc.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
 
 struct node
 {
-    int value;
-    struct node* next;    
-};
-
-struct linkedlist
-{
-    struct node* header;
-    struct node* tail; // optional
-    int size;
+    int val;
+    struct Node* next;
 };
 
 struct node* new_node(int value)
@@ -52,14 +46,6 @@ void insert(struct linkedlist* list, struct node* new_node)
     
 
     // if there is no tail
-    
-}
-
-int delete(struct linkedlist* list, int value)
-{
-    // delete node that have value we want
-    // if delete successfully, than return 0
-    // else return -1
     
 }
 

@@ -70,7 +70,7 @@ void insert_item(struct Tree* tree, int item)
     {
         int flag = 0;
         struct Node* node = tree->head;
-        while(flag == 0)
+        while(flag == 0)//current
         {
             if(item < node->value)
             {

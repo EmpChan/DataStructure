@@ -10,7 +10,7 @@ struct Node
 // this tree is binary search tree
 struct Tree
 {
-    struct Node* head;
+    struct Node* root;
     int size;
 };
 
