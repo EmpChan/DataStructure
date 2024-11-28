@@ -17,29 +17,19 @@ struct node* new_node(int value)
     // return new node
 }
 
-struct linkedlist* new_linkedlist()
-{
-    // make new linkedlist
-
-    // initialize
-   
-    // return linkedlist
-
-}
-
-int size(struct linkedlist* list)
+int size(struct node* head)
 {
     // return size of linkedlist 
     
 }
 
-int empty(struct linkedlist* list)
+int empty(struct node* head)
 {
     // if list empty return 1 else return 0
     
 }
 
-void insert(struct linkedlist* list, struct node* new_node)
+void insert(struct node* head, struct node* new_node)
 {
     // insert new_node to end of linkedlist
     // if there is tail
@@ -49,7 +39,7 @@ void insert(struct linkedlist* list, struct node* new_node)
     
 }
 
-int delete(struct linkedlist* list, int value)
+int delete(struct node* head, int value)
 {
     // delete node that have value we want
     // if delete successfully, than return 0
@@ -57,21 +47,21 @@ int delete(struct linkedlist* list, int value)
     
 }
 
-void print_list (struct linkedlist* list)
+void print_list (struct node* head)
 {
     // print all items
 }
 
 int main()
 {
-    struct linkedlist* list = new_linkedlist();
+    struct node* head = NULL;
     int i, n = 5;
     for(i=0; i<n; i++)
     {
-        insert(list,i*10);
+        insert(head,i*10);
     }
-    print_list(list);
+    print_list(head);
 
-    delete(list,10);
-    print_list(list);
+    delete(head,10);
+    print_list(head);
 }
