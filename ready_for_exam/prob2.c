@@ -8,7 +8,7 @@ void selection_sort(char* arr,int size)
 
 }
 
-int* get_random_arr(int size)
+char* get_random_arr(int size)
 {
     char* arr = __________;// allocation using malloc
 
@@ -20,7 +20,7 @@ int* get_random_arr(int size)
     return arr;
 }
 
-void write_result_to_file(char* arr)
+void write_result_to_file(char* arr, int size)
 {
     // sorted arr to a.txt
     
