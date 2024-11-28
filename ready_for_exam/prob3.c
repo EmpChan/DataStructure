@@ -49,6 +49,14 @@ void insert(struct linkedlist* list, struct node* new_node)
     
 }
 
+int delete(struct linkedlist* list, int value)
+{
+    // delete node that have value we want
+    // if delete successfully, than return 0
+    // else return -1
+    
+}
+
 void print_list (struct linkedlist* list)
 {
     // print all items
