@@ -28,41 +28,73 @@ struct Item* new_item(int val)
 struct Queue* new_Queue()
 {
     // make new Queue
-    
+    struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
     // initializing
-    
+    queue->size = 0;
+    queue->front = NULL;
+    queue->rear = NULL;
     // return Queue 
-    
+    return queue;
 }
 
 int size(struct Queue* q)
 {
     // return Queue size
-
+    return q->size;
 }
 
 int empty(struct Queue* q)
 {
     // if Queue is empty return 1 else return 0
-
+    return q->size == 0;
 }
 
 int front(struct Queue* q)
 {
-    // return front of Queue 
-    
+    // return top of Queue 
+    if(empty(q))
+    {
+        return -1;
+    } 
+    else
+    {
+        return q->front->val;
+    } 
 }
 
 void push(struct Queue* q, int val)
 {
     // push to Queue 
-    
+    if(empty(q))
+    {
+        q->front = new_item(val);
+        q->rear = q->front;
+        q->size++;
+    }
+    else
+    {
+        q->rear->next = new_item(val);
+        q->rear = q->rear->next;
+        q->size++;
+    }
 }
 
 int pop(struct Queue* q)
 {
     // pop and return the value of Queue
-    
+    if(empty(q))
+    {
+        return -1;
+    }
+    else
+    {
+        int ret_val = q->front->val;
+        struct Item* tmp = q->front;
+        q->front = q->front->next; 
+        q->size--;
+        free(tmp);
+        return ret_val;
+    }
 }
 
 int main()
