@@ -4,7 +4,7 @@
 struct Item
 {
     int val;
-    struct item* next;
+    struct Item* next;
 };
 
 struct Stack
